@@ -8,6 +8,12 @@ A list of supported Zigbee devices can be found on the [Supported Devices](https
 To communicate with Zigbee devices the [RaspBee](https://phoscon.de/raspbee?ref=gh) / [RaspBee&nbsp;II](https://phoscon.de/raspbee2?ref=gh) Zigbee shield for Raspberry Pi, or a [ConBee](https://phoscon.de/conbee?ref=gh) / [ConBee&nbsp;II](https://phoscon.de/conbee2?ref=gh) USB dongle is required.
 
 To learn more about the REST-API itself please visit the [REST-API Documentation](http://dresden-elektronik.github.io/deconz-rest-doc/) page.<br>
+
+```Do a GET request to https://phoscon.de/discover to get the IP and other internal gateway data```
+
+With the IP, you can request an API key. Do a POST to ```http://192.168.1.215:80/api``` with the JSON payload of ```{"devicetype":""my application}```
+
+
 The REST-API plugin is implemented in C++ using the [deCONZ C++ API Documentation](https://phoscon.de/deconz-cpp).
 
 For community based support with deCONZ or Phoscon, please visit the [deCONZ Discord server](https://discord.gg/QFhTxqN). 
