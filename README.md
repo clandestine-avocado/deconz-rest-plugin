@@ -9,10 +9,10 @@ To communicate with Zigbee devices the [RaspBee](https://phoscon.de/raspbee?ref=
 
 To learn more about the REST-API itself please visit the [REST-API Documentation](http://dresden-elektronik.github.io/deconz-rest-doc/) page.<br>
 
-# Interacting with the API - Getting Started
-Do a GET request to ```https://phoscon.de/discover``` to get the IP and other internal gateway data
+### Interacting with the API - Getting Started
+Unless you already know the IP and port of your gateway, you need to do a GET request to ```https://phoscon.de/discover``` to get the IP and other internal gateway data
 
-Response:
+Example Response:
 ```
 [
   {
@@ -27,8 +27,7 @@ Response:
 ```
 
 
-With the ```IP:PORT```, you can request an API key. Do a POST to ```http://192.168.1.215:80/api``` with the JSON payload of ```{"devicetype":""my application}```
-Before running this POST, you MUST unlock the gateway as follows:
+Next, you need an API key. With the ```IP:PORT``` data, you can request an API key. Do a POST to ```http://192.168.1.215:80/api``` with the JSON payload of ```{"devicetype":""my application}```. Before running this POST, you MUST unlock the gateway as follows:
 
 <li>Open the Phoscon App
 <li>Click on Menu → Settings → Gateway
@@ -36,7 +35,7 @@ Before running this POST, you MUST unlock the gateway as follows:
 <li>Click on the “Authenticate app” button
 <li>Run the POST request
 
-Response:
+Example Response:
 ```
 [
     {
@@ -47,6 +46,19 @@ Response:
   ]
 ```
 
+Now you can build and REST commands you want with ```http://IP:PORT/<API KEY>/```
+Examples:
+  <li> List all lights: ```http://192.168.1.215:80/api/B2F077CD18/lights``` via GET post
+  <li> List all sensors: ```http://192.168.1.215:80/api/B2F077CD18/sensors```via GET post
+  <li> Get the details of a device by its ID: ```http://192.168.1.215:80/api/B2F077CD18/lights/5``` via GET post
+  <li> Turn on a light: ```http://192.168.1.215:80/api/B2F077CD18/lights/5/state``` with a JSON payload of ```{"on": true}```
+  <li> Turn off a light: ```http://192.168.1.215:80/api/B2F077CD18/lights/5/state``` with a JSON payload of ```{"on": false}```
+    
+    
+  
+  
+  
+  
 The REST-API plugin is implemented in C++ using the [deCONZ C++ API Documentation](https://phoscon.de/deconz-cpp).
 
 For community based support with deCONZ or Phoscon, please visit the [deCONZ Discord server](https://discord.gg/QFhTxqN). 
