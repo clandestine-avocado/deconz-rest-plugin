@@ -55,18 +55,27 @@ Example Response:
 ```
 
 Now you can build and REST commands you want with ```http://IP:PORT/<API KEY>/```
-Examples:
+
+Examples include:
   <li> List all lights via GET post: </li>
-   ``` 
-   http://192.168.1.215:80/api/B2F077CD18/lights 
-   ``` 
-  <li> List all sensors via GET post
+   
+    http://192.168.1.215:80/api/B2F077CD18/lights 
+    
+  <li> List all sensors via GET post: </li>
       
     http://192.168.1.215:80/api/B2F077CD18/sensors
 
-  <li> Get the details of a device by its ID: ```http://192.168.1.215:80/api/B2F077CD18/lights/5``` via GET post
-  <li> Turn on a light: ```http://192.168.1.215:80/api/B2F077CD18/lights/5/state``` with a JSON payload of ```{"on": true}``` via PUT post
-  <li> Turn off a light: ```http://192.168.1.215:80/api/B2F077CD18/lights/5/state``` with a JSON payload of ```{"on": false}``` via PUT post
+  <li> Get the details of a device by its ID via GET post </li>
+
+    http://192.168.1.215:80/api/B2F077CD18/lights/5    
+    
+  <li> Turn on a light with a JSON payload of ```{"on": true}``` via PUT post </li>
+    
+    http://192.168.1.215:80/api/B2F077CD18/lights/5/state    
+  
+  <li> Turn off a light with a JSON payload of ```{"on": false}``` via PUT post </li>
+    
+    http://192.168.1.215:80/api/B2F077CD18/lights/5/state    
     
     
   
