@@ -9,6 +9,7 @@ To communicate with Zigbee devices the [RaspBee](https://phoscon.de/raspbee?ref=
 
 To learn more about the REST-API itself please visit the [REST-API Documentation](http://dresden-elektronik.github.io/deconz-rest-doc/) page.<br>
 
+# Interacting with the API - Getting Started
 Do a GET request to ```https://phoscon.de/discover``` to get the IP and other internal gateway data
 
 Response:
