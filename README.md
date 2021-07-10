@@ -11,7 +11,7 @@ To learn more about the REST-API itself please visit the [REST-API Documentation
 
 ---
 ### Interacting with the API - Getting Started
-Unless you already know the IP and port of your gateway, you need to do a GET request to ```https://phoscon.de/discover``` to get the IP and other internal gateway data
+>Unless you already know the IP and port of your gateway, you need to do a GET request to ```https://phoscon.de/discover``` to get the IP and other internal gateway >data
 
 
 
