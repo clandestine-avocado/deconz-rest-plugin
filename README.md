@@ -29,11 +29,11 @@ Response:
 With the ```IP:PORT```, you can request an API key. Do a POST to ```http://192.168.1.215:80/api``` with the JSON payload of ```{"devicetype":""my application}```
 Before running this POST, you MUST unlock the gateway as follows:
 
-Open the Phoscon App
-Click on Menu → Settings → Gateway
-Click on “Advanced” button
-Click on the “Authenticate app” button
-Run the POST request
+<li>Open the Phoscon App
+<li>Click on Menu → Settings → Gateway
+<li>Click on “Advanced” button
+<li>Click on the “Authenticate app” button
+<li>Run the POST request
 
 Response:
 ```
