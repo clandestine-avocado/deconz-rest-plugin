@@ -1,9 +1,6 @@
 Introduction
 ============
 
-    http://192.168.1.215:80/api/B2F077CD18/sensors
-      indented code block
-
 
 
 The deCONZ REST plugin provides a REST-API to access Zigbee 3.0 (Z30), Zigbee Home Automation (ZHA) and Zigbee Light Link (ZLL) lights, switches and sensors from Xiaomi Aqara, IKEA TRÅDFRI, Philips Hue, innr, Samsung and many more vendors.
@@ -57,6 +54,7 @@ Example Response:
 Now you can build and REST commands you want with ```http://IP:PORT/<API KEY>/```
 
 Examples include:
+    
   List all lights via ```GET``` post:
    
     http://192.168.1.215:80/api/B2F077CD18/lights 
