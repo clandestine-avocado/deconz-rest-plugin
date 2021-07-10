@@ -69,7 +69,7 @@ Examples include:
 
     http://192.168.1.215:80/api/B2F077CD18/lights/5    
     
-  <li> Turn on a light with a JSON payload of ```{"on": true}``` via PUT post </li>
+  Turn on a light with a JSON payload of ```{"on": true}``` via PUT post
     
     http://192.168.1.215:80/api/B2F077CD18/lights/5/state    
   
