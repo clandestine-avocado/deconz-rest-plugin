@@ -9,10 +9,42 @@ To communicate with Zigbee devices the [RaspBee](https://phoscon.de/raspbee?ref=
 
 To learn more about the REST-API itself please visit the [REST-API Documentation](http://dresden-elektronik.github.io/deconz-rest-doc/) page.<br>
 
-```Do a GET request to https://phoscon.de/discover to get the IP and other internal gateway data```
+Do a GET request to ```https://phoscon.de/discover``` to get the IP and other internal gateway data
 
-With the IP, you can request an API key. Do a POST to ```http://192.168.1.215:80/api``` with the JSON payload of ```{"devicetype":""my application}```
+Response:
+```
+[
+  {
+    "id": "00212EFFFF04F20A",
+    "internalipaddress": "192.168.1.215",
+    "macaddress": "00212EFFFF04F20A",
+    "internalport": 80,
+    "name": "Phoscon-GW",
+    "publicipaddress": "108.28.9.36"
+  }
+]
+```
 
+
+With the ```IP:PORT```, you can request an API key. Do a POST to ```http://192.168.1.215:80/api``` with the JSON payload of ```{"devicetype":""my application}```
+Before running this POST, you MUST unlock the gateway as follows:
+
+Open the Phoscon App
+Click on Menu → Settings → Gateway
+Click on “Advanced” button
+Click on the “Authenticate app” button
+Run the POST request
+
+Response:
+```
+[
+    {
+      "success": {
+        "username": "B2F077CD18"
+      }
+    }
+  ]
+```
 
 The REST-API plugin is implemented in C++ using the [deCONZ C++ API Documentation](https://phoscon.de/deconz-cpp).
 
