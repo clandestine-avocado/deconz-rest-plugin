@@ -54,7 +54,10 @@ Example Response:
 
 Now you can build and REST commands you want with ```http://IP:PORT/<API KEY>/```
 Examples:
-  <li> List all lights: ``` http://192.168.1.215:80/api/B2F077CD18/lights ``` via GET post
+  <li> List all lights via GET post: 
+   ``` 
+   http://192.168.1.215:80/api/B2F077CD18/lights 
+   ``` 
   <li> List all sensors: ```http://192.168.1.215:80/api/B2F077CD18/sensors``` via GET post
   <li> Get the details of a device by its ID: ```http://192.168.1.215:80/api/B2F077CD18/lights/5``` via GET post
   <li> Turn on a light: ```http://192.168.1.215:80/api/B2F077CD18/lights/5/state``` with a JSON payload of ```{"on": true}``` via PUT post
